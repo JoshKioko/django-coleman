@@ -137,6 +137,6 @@ About
 
 **Authors**: (2017-2018) Mariano Ruiz <mrsarm@gmail.com>
 
-**Contributors**: (Dec 2018) Josh
+**Contributors**: (Dec 2018) Josh Kioko <jomwaki1@gmail.com>
 
 **License**: AGPL-v3
