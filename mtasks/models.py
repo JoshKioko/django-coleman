@@ -52,3 +52,37 @@ class Item(models.Model):
 
     def __str__(self):
         return self.item_description
+
+
+class TaskFile(models.Model):
+    class Meta:
+        verbose_name = _("TaskFile")
+        verbose_name_plural = _("TaskFiles")
+
+    data = models.FileField()
+    file_name = models.CharField(max_length=100)
+    file_description = models.CharField(max_length=1000)
+
+    def save(self, *args, **kwargs):
+        super(TaskFile, self).save(*args, **kwargs)
+        filename = self.data.url
+
+
+    def __str__(self):
+        return self.file_name
+
+
+class ProgressUpdate(models.Model):
+    class Meta:
+        verbose_name = _("Progress Update")
+        verbose_name_plural = _("Progress Updates")
+    task_owner = models.CharField(max_length=100)
+    milestone_achieved = models.CharField(max_length=500)
+    progress_update_file = models.FileField()
+
+    def save(self, *args, **kwargs):
+        super(ProgressUpdate, self).save(*args, **kwargs)
+        # name_of_file = self.task_owner.url
+
+    def __str__(self):
+        return self.task_owner

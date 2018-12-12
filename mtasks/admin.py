@@ -4,7 +4,7 @@ from django.contrib import admin
 from django.db import models
 from django.forms import Textarea
 from django.utils.translation import ugettext_lazy as _
-from .models import Task, Item
+from .models import Task, Item, TaskFile, ProgressUpdate
 from django_admin_listfilter_dropdown.filters import RelatedDropdownFilter
 
 
@@ -66,3 +66,5 @@ class TaskAdmin(AdminAdvancedFiltersMixin, admin.ModelAdmin):
 
 
 admin.site.register(Task, TaskAdmin)
+admin.site.register(TaskFile)
+admin.site.register(ProgressUpdate)

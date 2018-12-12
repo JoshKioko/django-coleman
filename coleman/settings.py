@@ -136,4 +136,4 @@ STATIC_ROOT = BASE_DIR + '/static/'
 # Custom configurations
 #
 
-SITE_HEADER = os.environ.get('SITE_HEADER', 'Django Coleman - A Simple Task Manager')
+SITE_HEADER = os.environ.get('SITE_HEADER', 'Aticas Kenya - Task Management System')
